@@ -1,5 +1,6 @@
 body{
     background-image: url("../media/meetriks.gif");
+    background-size: 50%;
     color: white;
     font-family: Arial, sans-serif;
     margin: 0px;
@@ -22,11 +23,15 @@ p{
     padding: 0px;
 }
 
-a{
+.link{
     text-decoration: none;
     color: black;
     background-color: green;
     padding: 10px;
+}
+
+.link:hover{
+    background-color: #00a600;
 }
 
 .title{
