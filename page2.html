@@ -11,24 +11,36 @@
     <a class="link" href="page2.html">uhhh</a>
     <a class="link" href="index.html">home2</a>
     <a class="link" href="index.html">home3</a>
+    <img class="clickable" id="yoshClick" src="media/yosh.png" height="40px" width="28.24px" onclick="toggleAudio()">
 </div>
 <body>
     <div class="header">
         <div class="title">
-            <h1>uhhhhhhhhhhhhh<br><img class="clickable" id="btnLeft" src="media/uhhh.jpg" height="250" width="250" onclick="toggleAudio()"></h1>
+            <h1>uhhhhhhhhhhhhh<br>
+                <img class="clickable" id="dogClick" src="media/uhhh.jpg" height="250" width="250" onclick="playSoundEffect()">
+            </h1>
         </div>
     </div>
 </body>
 </html>
 
-<audio id="audio" src="media/music.mp3"></audio>
+<audio id="music" src="media/music.mp3"></audio>
 <script>
-    const audio = document.getElementById('audio');
+    const audio = document.getElementById('music');
     function toggleAudio() {
         if (audio.paused) {
             audio.play();
         } else {
             audio.pause();
         }
+    }
+</script>
+
+<audio id="soundEffect" src="media/bark.mp3"></audio>
+<script>
+    function playSoundEffect() {
+        const soundEffect = document.getElementById('soundEffect');
+        soundEffect.currentTime = 0; // Reset the audio to the start
+        soundEffect.play();
     }
 </script>

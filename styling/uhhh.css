@@ -45,9 +45,16 @@ body{
     cursor: pointer;
 }
 
-#btnLeft:active {
+#dogClick:active {
     width: 230px;
     height: 230px;
-    padding: 10px;
-    border-radius: 10px;
+    margin: 10px;
+    animation-duration: 1s;
+}
+
+#yoshClick:active {
+    width: 21.18px;
+    height: 30px;
+    margin: 3.5px;
+    animation-duration: 1s;
 }
