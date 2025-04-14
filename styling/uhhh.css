@@ -51,8 +51,6 @@ body{
 }
 
 #btnLeft:active {
-    width: 230px;
-    height: 230px;
-    margin: 10px;
-    animation-duration: 1s;
+transform: scale(0.95);
+transition: transform 3ms;
 }
