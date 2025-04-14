@@ -16,8 +16,21 @@
 <body>
     <div class="header">
         <div class="title">
-            <h1>welkom op mijn website</h1>
+            <h1>hii welcome to the profile page !!!</h1><br>
+            <img class="clickable" id="btnLeft" src="media/guywave.jpg" height="200" width="200" onclick="playSoundEffect()">
         </div>
     </div>
 </body>
 </html>
+
+<audio id="soundEffect" src="media/meow.mp3"></audio>
+<script>
+    let count = 0;
+    function playSoundEffect() {
+        const soundEffect = document.getElementById('soundEffect');
+        soundEffect.currentTime = 0;
+        soundEffect.play();
+        count++;
+        document.getElementById('counter').textContent = `barks: ${count}`;
+    }
+</script>
