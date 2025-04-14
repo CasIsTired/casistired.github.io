@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styling/uhhh.css">
     <title>CasIsTired</title>
-    <audio src="media/music.mp3" autoplay></audio>
-
 </head>
 <div class="navBar">
     <a class="link" href="index.html">home</a>
@@ -17,8 +15,20 @@
 <body>
     <div class="header">
         <div class="title">
-            <h1>uhhhhhhhhhhhhh<br><img src="media/uhhh.jpg" height="250" width="250"></h1>
+            <h1>uhhhhhhhhhhhhh<br><img class="clickable" src="media/uhhh.jpg" height="250" width="250" onclick="toggleAudio()"></h1>
         </div>
     </div>
 </body>
 </html>
+
+<audio id="audio" src="media/music.mp3"></audio>
+<script>
+    const audio = document.getElementById('audio');
+    function toggleAudio() {
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    }
+</script>

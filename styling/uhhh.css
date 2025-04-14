@@ -40,3 +40,7 @@ body{
 .link:hover{
     background-color: lightgray;
 }
+
+.clickable{
+    cursor: pointer;
+}
