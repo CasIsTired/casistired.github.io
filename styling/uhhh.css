@@ -1,0 +1,42 @@
+body{
+    background-image: url("../media/uhhh.jpg");
+    background-size: 50%;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.navBar{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+    background-color: #202020;
+    height: 20px;
+    padding: 20px;
+}
+
+.header{
+    margin: 5%;
+    padding: 2%;
+    background-color: #202020cc;
+    text-align: center;
+}
+
+.title{
+
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+    background-color: gray;
+    padding: 10px;
+    margin: 0px 2%;
+}
+
+.link:hover{
+    background-color: lightgray;
+}
