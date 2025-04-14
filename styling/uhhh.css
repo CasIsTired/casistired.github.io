@@ -44,3 +44,10 @@ body{
 .clickable{
     cursor: pointer;
 }
+
+#btnLeft:active {
+    width: 230px;
+    height: 230px;
+    padding: 10px;
+    border-radius: 10px;
+}
