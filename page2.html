@@ -17,6 +17,7 @@
     <div class="header">
         <div class="title">
             <h1>uhhhhhhhhhhhhh<br>
+                <div id="counter" class="counter">barks: 0</div>
                 <img class="clickable" id="btnLeft" src="media/uhhh.jpg" height="250" width="250" onclick="playSoundEffect()">
             </h1>
         </div>
@@ -38,9 +39,12 @@
 
 <audio id="soundEffect" src="media/bark.mp3"></audio>
 <script>
+    let count = 0;
     function playSoundEffect() {
         const soundEffect = document.getElementById('soundEffect');
-        soundEffect.currentTime = 0; // Reset the audio to the start
+        soundEffect.currentTime = 0;
         soundEffect.play();
+        count++;
+        document.getElementById('counter').textContent = `barks: ${count}`;
     }
 </script>
