@@ -40,12 +40,32 @@
 
 <audio id="soundEffect" src="media/bark.mp3"></audio>
 <script>
-    let count = 0;
-    function playSoundEffect() {
-        const soundEffect = document.getElementById('soundEffect');
-        soundEffect.currentTime = 0;
-        soundEffect.play();
-        count++;
-        document.getElementById('counter').textContent = `barks: ${count}`;
+let count = 0;
+let isFlips = false;
+
+function playSoundEffect() {
+    const soundEffect = document.getElementById('soundEffect');
+    soundEffect.currentTime = 0;
+    soundEffect.play();
+    count++;
+    updateCounterText();
+}
+
+function updateCounterText() {
+    const counter = document.getElementById('counter');
+    counter.textContent = `${isFlips ? 'flips' : 'barks'}: ${count}`;
+
+    // Toggle the flips-mode class on the body
+    if (isFlips) {
+        document.body.classList.add('flips-mode');
+    } else {
+        document.body.classList.remove('flips-mode');
     }
+}
+
+document.getElementById('counter').addEventListener('click', () => {
+    isFlips = !isFlips;
+    updateCounterText();
+});
+
 </script>

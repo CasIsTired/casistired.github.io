@@ -44,9 +44,15 @@ body{
 .counter{
     font-size: 20px;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 #btnLeft:active {
     transform: scale(0.95);
     transition: transform 3ms;
+}
+
+.flips-mode #btnLeft:active {
+    transform: rotate(360deg);
+    transition: transform 300ms;
 }
