@@ -47,6 +47,6 @@ body{
 }
 
 #btnLeft:active {
-    transform: scale(0.95);;
-    transition: transform 3ms;
+    transform: rotate(360deg) scale(0.95);
+    transition: transform 300ms;
 }
