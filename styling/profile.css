@@ -20,13 +20,20 @@ body{
     border: #665e41 3px solid;
 }
 
-.header{
+.container{
     margin: 5%;
     padding: 2%;
     background-color: #bbab6a;
     text-align: center;
     border-radius: 10px;
     border: #665e41 3px solid;
+}
+
+.images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .title{
