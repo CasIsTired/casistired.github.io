@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styling/frutiger.css">
+    <link rel="icon" type="image/x-icon" href="media/guy.jpg">
+    <title>CasIsTired</title>
+</head>
+<div class="navBar">
+    <a class="link" href="index.html">home</a>
+    <a class="link" href="profile.html">profile</a>
+    <a class="link" href="uhhh.html">uhhh</a>
+    <a class="link" href="frutiger.html">frutiger</a>
+    <img class="music" src="media/musix.ico" height="50px" width="50px" onclick="toggleAudio()">
+</div>
+<body>
+    <div class="container">
+        <div class="title">
+            <img src="media/catdance.gif" height="50%" width="auto">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            
+        </div>
+    </div>
+</body>
+</html>
+
+<audio id="music" src="media/frutiger.mp3#t=1"></audio>
+<script>
+    const audio = document.getElementById('music');
+    audio.volume = 0.1;
+    function toggleAudio() {
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    }
+</script>
