@@ -56,3 +56,26 @@ body{
 .link:hover{
     background-color: #a9cdfc8f;
 }
+
+.bubble {
+    position: fixed;
+    bottom: -300px;
+    width: 20%;
+    max-width: 10rem;
+    height: auto;
+    z-index: 1000;
+    animation: floatUp ease-in forwards;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-120vh);
+        opacity: 0;
+    }
+}

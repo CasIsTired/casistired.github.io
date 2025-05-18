@@ -12,12 +12,11 @@
     <a class="link" href="profile.html">profile</a>
     <a class="link" href="uhhh.html">uhhh</a>
     <a class="link" href="frutiger.html">frutiger</a>
-    <img class="music" src="media/musix.ico" height="50px" width="50px" onclick="toggleAudio()">
+    <img class="music" src="media/musicNote.ico" height="50px" width="50px" onclick="toggleAudio()">
 </div>
 <body>
     <div class="container">
         <div class="title">
-            <img src="media/catdance.gif" height="50%" width="auto">
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -30,6 +29,47 @@
     </div>
 </body>
 </html>
+
+<script>
+    const NUM_BUBBLES = 10;
+    const activeBubbles = new Set();
+
+    function createBubble() {
+        if (activeBubbles.size >= NUM_BUBBLES) return;
+
+        const bubble = document.createElement('img');
+        bubble.src = 'media/bubble.png';
+        bubble.className = 'bubble';
+
+        // Set random horizontal position
+        bubble.style.left = Math.random() * 100 + 'vw';
+        bubble.style.animationDuration = (3 + Math.random() * 4) + 's';
+
+        // Add to tracking set
+        activeBubbles.add(bubble);
+
+        // Remove on click
+        bubble.onclick = () => {
+            bubble.remove();
+            activeBubbles.delete(bubble);
+        };
+
+        // Remove after animation ends
+        bubble.addEventListener('animationend', () => {
+            bubble.remove();
+            activeBubbles.delete(bubble);
+        });
+
+        document.body.appendChild(bubble);
+    }
+
+    // Continuous bubble creation loop
+    setInterval(() => {
+        if (activeBubbles.size < NUM_BUBBLES) {
+            createBubble();
+        }
+    }, 500); // Check every 0.5 seconds
+</script>
 
 <audio id="music" src="media/frutiger.mp3#t=1"></audio>
 <script>
