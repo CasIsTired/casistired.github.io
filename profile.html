@@ -35,6 +35,7 @@
     let count = 0;
     function playSoundEffect() {
         const soundEffect = document.getElementById('soundEffect');
+        soundEffect.volume = 0.5;
         soundEffect.currentTime = 0;
         soundEffect.play();
     }

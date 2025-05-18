@@ -46,6 +46,7 @@ let isFlips = false;
 
 function playSoundEffect() {
     const soundEffect = document.getElementById('soundEffect');
+    soundEffect.volume = 0.3;
     soundEffect.currentTime = 0;
     soundEffect.play();
     count++;
