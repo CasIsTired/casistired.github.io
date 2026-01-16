@@ -36,20 +36,16 @@
         bubble.src = 'media/bubble.png';
         bubble.className = 'bubble';
 
-        // Set random horizontal position
         bubble.style.left = Math.random() * 100 + 'vw';
         bubble.style.animationDuration = (3 + Math.random() * 4) + 's';
 
-        // Add to tracking set
         activeBubbles.add(bubble);
 
-        // Remove on click
         bubble.onclick = () => {
             bubble.remove();
             activeBubbles.delete(bubble);
         };
 
-        // Remove after animation ends
         bubble.addEventListener('animationend', () => {
             bubble.remove();
             activeBubbles.delete(bubble);
@@ -58,12 +54,11 @@
         document.body.appendChild(bubble);
     }
 
-    // Continuous bubble creation loop
     setInterval(() => {
         if (activeBubbles.size < NUM_BUBBLES) {
             createBubble();
         }
-    }, 500); // Check every 0.5 seconds
+    }, 500);
 </script>
 
 <audio id="music" src="media/frutiger.mp3#t=1"></audio>
